@@ -1,0 +1,4 @@
+*.yml
+.idea/*
+mysql_data/*
+framework/application/config/database.php
