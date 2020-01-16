@@ -83,7 +83,7 @@ class User_model extends CI_Model
             $count = $this->db->escape_str($count);
         }
 
-        $query = "SELECT * FROM user ORDER BY idx DESC LIMIT ".$page*$count.", ".$count;
+        $query = "SELECT a.* FROM (SELECT idx FROM user ORDER BY idx DESC LIMIT ".$page*$count.", ".$count.") b JOIN user a on b.idx = a.idx";
         $find = $this->db->query($query);
         
         $result = $find->result();
