@@ -36,8 +36,8 @@ RUN apt-get update \
       php7.3-zip \
       composer \
       vim \
-	  curl \
-	  wget \
+      curl \
+      wget \
       zsh \
       git \
       mysql-client \
@@ -57,5 +57,3 @@ COPY . /var/www/html
 EXPOSE 80 443
 
 CMD ["/usr/local/bin/run" ]
-
-ENTRYPOINT ["zsh"]

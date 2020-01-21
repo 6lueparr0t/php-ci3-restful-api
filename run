@@ -6,10 +6,8 @@ sed -ri 's/^display_errors\s*=\s*Off/display_errors = On/g' /etc/php/7.3/apache2
 sed -ri 's/^display_errors\s*=\s*Off/display_errors = On/g' /etc/php/7.3/cli/php.ini
 sed -ri "s/^error_reporting\s*=.*$//g" /etc/php/7.3/apache2/php.ini
 sed -ri "s/^error_reporting\s*=.*$//g" /etc/php/7.3/cli/php.ini
-
-sed -ri "166s/AllowOverride\sAll/AllowOverride All/g" /etc/apache2/apache2.conf
+sed -ri "166s/AllowOverride\sNone/AllowOverride All/g" /etc/apache2/apache2.conf
 sed -ri "12s/\/var\/www\/html/\/var\/www\/html\/framework/g" /etc/apache2/sites-available/000-default.conf
-
 echo "error_reporting = $PHP_ERROR_REPORTING" >> /etc/php/7.3/apache2/php.ini
 echo "error_reporting = $PHP_ERROR_REPORTING" >> /etc/php/7.3/cli/php.ini
 
