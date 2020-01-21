@@ -80,7 +80,7 @@ class V1 extends CI_Controller
 
 	function join($data) {
 		// $result = ['code' => '-1', 'result' => 'wrong key'];
-		$cleanData = $this->um->joinCheck($data);
+		$cleanData = $this->usermanager->joinCheck($data);
 		
 		if($this->user->count_rcmd($cleanData['rcmd']) > 5) {
 			return ['code' => '-1', 'result' => 'This customer is not eligible for referrals.'];
@@ -109,7 +109,7 @@ class V1 extends CI_Controller
 		}
 		
 		if(in_array($data['key'], $this->user_search_key) == true) {
-			$cleanData = $this->um->joinCheck($data['request'], true);
+			$cleanData = $this->usermanager->joinCheck($data['request'], true);
 			$result = $this->user->user_update($cleanData, $data['key'], $data['value']);
 		} else {
 			$result = ['code' => '-1', 'result' => 'Unauthorized key2'];
