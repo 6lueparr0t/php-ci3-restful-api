@@ -1,8 +1,8 @@
 # Codeigniter를 이용한 Restful API 개발
 
-## API 사용법
+### API 사용법
 
-# 1. 유저 조회
+## 1. 유저 조회
 
 GET http://127.0.0.1:8080/v1/user?key=email&value=test@test.com
 http://127.0.0.1:8080/v1/user
@@ -15,7 +15,7 @@ http://127.0.0.1:8080/v1/user
 
 ex) curl --location --request GET 'http://127.0.0.1:8080/v1/user?key=email&value=test@test.com'
 
-# 2. 유저 생성
+## 2. 유저 생성
 
 POST http://127.0.0.1:8080/v1/user
 
@@ -33,7 +33,7 @@ POST http://127.0.0.1:8080/v1/user
 ex) curl --location --request POST 'http://127.0.0.1:8080/v1/user' \
 --data-raw '{"name":"testman", "nick":"testt", "tel":"01012345678", "email":"test@test.com", "pswd":"testtest!1", "rcmd":"", "gender":"m"}'
 
-# 3. 유저 업데이트
+## 3. 유저 업데이트
 
 PUT http://127.0.0.1:8080/v1/user
 
@@ -47,7 +47,7 @@ PUT http://127.0.0.1:8080/v1/user
 ex) curl --location --request PUT 'http://127.0.0.1:8080/v1/user' \
 --data-raw '{"request":{"name":"daihyun"}, "key":"idx", "value" : "9" }'
 
-# 4. 유저 삭제
+## 4. 유저 삭제
 
 DEL http://127.0.0.1:8080/v1/user
 
@@ -60,7 +60,7 @@ DEL http://127.0.0.1:8080/v1/user
 ex) curl --location --request DELETE 'http://127.0.0.1:8080/v1/user?=&=' \
 --data-raw '{"key":"idx", "value" : "9" }'
 
-# 5. 유저 리스트 (페이징)
+## 5. 유저 리스트 (페이징)
 
 GET http://127.0.0.1:8080/v1/userlist
 
