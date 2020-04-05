@@ -1,4 +1,4 @@
-# Codeigniter를 이용한 Restful API 개발
+# Codeigniter를 이용한 RESTful API 개발
 
 ## API 사용법
 
