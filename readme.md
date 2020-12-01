@@ -57,7 +57,7 @@ DEL http://127.0.0.1:8080/v1/user
 |*key | 검색할 키 |
 |*value| 검색할 값 |
 
-ex) curl --location --request DELETE 'http://127.0.0.1:8080/v1/user?=&=' \
+ex) curl --location --request DELETE 'http://127.0.0.1:8080/v1/user' \
 --data-raw '{"key":"idx", "value" : "9" }'
 
 ### 5. 유저 리스트 (페이징)
