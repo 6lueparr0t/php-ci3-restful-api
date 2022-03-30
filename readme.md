@@ -1,4 +1,6 @@
 # Codeigniter를 이용한 RESTful API 개발
+- 아이디어스(idus) 과제 전형
+- 도커를 사용하여 php(codeigniter) 환경 구성
 
 ## API 사용법
 
